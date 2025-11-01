@@ -44,3 +44,11 @@ body {
 }
 
 // Begin theme styles
+    @font-face {
+      font-family: 'MyCustomFont'; 
+      src: url('fonts/MyCustomFont-Regular.woff2') format('woff2'),
+           url('fonts/MyCustomFont-Regular.woff') format('woff');
+      font-weight: normal; 
+      font-style: normal;  
+      
+    }
