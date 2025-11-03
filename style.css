@@ -72,7 +72,7 @@ h1 {
 h2 {
   font-family: "Libre Franklin", sans-serif;
   font-size: 1.8rem;
-  font-weight: normal;
+  font-weight: lighter;
   text-align: center;
   font-weight: 200;
 }
@@ -405,6 +405,7 @@ ul .profile-website span {
   font-size: 3rem;
   text-align: center;
   color: #E90606;
+  margin-bottom: 20px;
 }
 
 .container .features {
@@ -451,4 +452,152 @@ ul .profile-website span {
 .features li a:hover {
   color: #363636;
   text-decoration: underline;
+}
+
+.link-allstyles {
+  display: flex;
+  justify-content: center;
+  background-color: #E90606 ;
+  color: white;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  font-family: "Libre Franklin", "sans-serif";
+  font-weight: 100;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link-allstyles:hover {
+  background-color: white;
+  color: #E90606;
+  border: 2px solid #E90606;
+}
+
+.page-footer .container {
+  display: grid;
+  background-color: white;
+}
+
+.page-footer .container p:first-child {
+  font-family: "Libre Franklin", "sans-serif";
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px 30px;
+  color: #363636;
+  border-top: 1px solid #363636;
+}
+
+.page-footer .container p a {
+  color: #363636;
+}
+
+.page-footer .container p a:hover {
+  color: #E90606;
+}
+
+.page-footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page-footer li {
+  font-family: "Libre Franklin", "sans-serif";
+  font-weight: 100;
+  font-size: 1.2rem;
+  color: #363636;
+  text-decoration: none;
+}
+
+.link-twittercontact {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 30px;
+  border: 0.5px solid black;
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
+  color: #E90606;
+}
+
+.link-twittercontact:hover {
+  background-color: #363636;
+  color: white;
+  border: 2px solid #E90606;
+}
+
+.link-rss {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 30px;
+  border: 0.5px solid black;
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
+  color: #E90606;
+}
+
+.link-rss:hover {
+  background-color: #363636;
+  color: white;
+  border: 2px solid #E90606;
+}
+
+.link-support {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 30px;
+  border: 0.5px solid black;
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
+  color: #E90606;
+}
+
+.link-support:hover {
+  background-color: #363636;
+  color: white;
+  border: 2px solid #E90606;
+}
+
+.page-footer .container p {
+  font-family: "Libre Franklin", "sans-serif";
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px 30px;
+  color: #363636;
+  margin-top: 0;
+  margin-bottom: 0;
 }
