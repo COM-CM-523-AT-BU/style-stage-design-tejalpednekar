@@ -163,6 +163,7 @@ header p a:hover {
   display: flex;
   gap: 1em;
   flex-wrap: nowrap;
+  white-space: nowrap;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
@@ -724,6 +725,10 @@ ul .profile-website span {
     background-color: white;
   }
 
+  h1 {
+    font-size: 5rem;
+  }
+
   nav ul {
     list-style: none;
     display: flex;
@@ -735,12 +740,27 @@ ul .profile-website span {
     margin; 0 auto;
   }
 
+  section p, .container ol li {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 10px 15px;
+  }
+
   article > section {
     margin: 40px 40px;
+    padding: 5px;
+  }
+
+  article .container {
+    outline: 10px solid #E90606;
+    border: 5px solid white;
+    padding: 5px;
   }
 
   .features {
+    display: grid;
     grid-template-columns: repeat(2,1fr);
+    gap: 1em;
   }
 
   .profile ul {
@@ -751,28 +771,29 @@ ul .profile-website span {
     margin: 0 auto;
   }
 
-  profile ul li {
+  .profile ul li {
     max-width: 90%;
   }
-
-  h1 {
-    font-size: 4rem;
-  }
-
-  #files a,
-  .link-allstyles,
-  .profile a[href$=".css"],
-  .link-guidelines {
+  
+  #files a {
     width: 100%;
+    max-width: 270px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column nowrap;
     justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 15px 10px;
+    margin: 15px auto;
+    white-space: nowrap;
+    box-sizing: border-box;
   }
 
   .page-footer ul {
   flex-direction: column;
   align-items: center;
+  gap: 0.5em;
   }
 
   .page-footer .container {
@@ -788,9 +809,72 @@ ul .profile-website span {
   .features li {
     padding: auto;
     margin: 5px auto;
+    font-size: 1rem;
   }
 
   .features li a {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
+
+  .features li:hover {
+    padding: auto;
+    margin: 5px auto;
+    font-size: 1rem;
+  }
+
+  blockquote p {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  article .container h2 {
+    font-size: 1.5rem;
+  }
+
+  #profile-title {
+    font-size: 1.5rem;
+    margin: 20px auto;
+  }
+  
+  #contribute h3 {
+    font-size: 1.5rem;
+  }
+
+  #styles h2 {
+    font-size: 1.5rem;
+  }
+
+  #files .container h3 {
+     font-size: 1.5rem;
+}
+
+#files a {
+  font-size: 0.8rem;
+  padding: 8px 18px;
+  width: 130px;
+}
+
+.profile a[href$=".css"],
+.link-allstyles,
+.link-guidelines {
+  padding: 10px 20px;
+  margin: 20px auto;
+  width: fit-content;
+  font-size: 1.2rem;
+}
+
+#guidelines h3 {
+  font-size: 1.5rem;
+}
+
+.profile ul li {
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 15px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.page-footer .container p {
+  font-size: 1rem;
 }
