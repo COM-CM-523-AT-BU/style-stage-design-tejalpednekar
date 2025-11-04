@@ -14,8 +14,54 @@
   font-style: normal;
 }
 
-html {
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Begin theme styles
+
+html {
   background-color:rgb(255 252 248/var(--tw-bg-opacity,1));
 }
 
@@ -85,6 +131,10 @@ h2 {
   margin: 0;
 }
 
+header > .container {
+  width: 100%;
+}
+
 header p {
   font-family: "Libre Franklin", sans-serif;
   text-transform: uppercase;
@@ -109,6 +159,7 @@ header p a:hover {
 .link-github {
   display: flex;
   gap: 1em;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
@@ -116,17 +167,17 @@ header p a:hover {
   font-weight: 100;
   font-size: 1.2rem;
   text-decoration: none;
-  padding: 30px;
+  padding: 30px 15px;
   border: 0.5px solid black;
   width: 250px;
   height: 50px;
   margin: 0 auto;
-  color: black;
+  color: #E90606;
 }
 
 .link-github svg {
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   fill: #E90606;
 }
 
@@ -161,6 +212,13 @@ nav ul a {
 nav ul a:hover {
   text-decoration: underline;
   color: #E90606;
+}
+
+article .container {
+width: 100%;
+max-width: 90ch;
+margin-left: auto;
+margin-right: auto;
 }
 
 article .container h2 {
@@ -209,7 +267,6 @@ article .container {
   outline: 15px solid #E90606;
   border: 7px solid white;
   padding: 10px;
-  box-shadow: 10px 5px 5px #E90606;
 }
 
 article > section {
@@ -272,19 +329,21 @@ section ul li {
   border: none;
   outline: none;
   padding: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
 }
 
 #files .container h3 {
   font-family: "Cinzel-Bold", "serif";
   color: white; 
   margin-top: 0;
-}
-
-#files {
-  background-color:rgb(255 252 248/var(--tw-bg-opacity,1));
-  padding-top: 0;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
 #files a {
@@ -293,12 +352,14 @@ section ul li {
   font-size: 1.2rem;
   background-color: #E90606;
   text-transform: uppercase;
-  margin: 20px;
+  text-decoration: none;
   color: white;
   line-height: 2;
-  width: fit-content;
-  padding: 10px 20px;
-  text-decoration: none;
+  padding: 15px 25px;
+  width: 200px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #files a:hover {
@@ -390,7 +451,9 @@ ul .profile-website span {
   font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
-  margin-bottom: 20px;
+  margin: 20px auto;
+  display: block;
+  width: fit-content;
 }
 
 .profile a[href$=".css"]:hover {
@@ -412,7 +475,7 @@ ul .profile-website span {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: stretch;
   gap: 1em;
   padding: 0;
@@ -431,6 +494,7 @@ ul .profile-website span {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .features li a { 
@@ -456,7 +520,9 @@ ul .profile-website span {
 
 .link-allstyles {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
   background-color: #E90606 ;
   color: white;
   padding: 20px 30px;
@@ -466,11 +532,8 @@ ul .profile-website span {
   font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .link-allstyles:hover {
@@ -479,9 +542,21 @@ ul .profile-website span {
   border: 2px solid #E90606;
 }
 
-.page-footer .container {
-  display: grid;
+.page-footer {
   background-color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.page-footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 90ch;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .page-footer .container p:first-child {
@@ -506,9 +581,14 @@ ul .profile-website span {
 .page-footer ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
+  gap: 2em;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 70%;
 }
 
 .page-footer li {
@@ -598,6 +678,91 @@ ul .profile-website span {
   text-align: center;
   padding: 20px 30px;
   color: #363636;
+  margin: auto;
+}
+
+#guidelines h3 {
+  font-family: "Libre Franklin", "sans-serif";
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: center;
+  animation: blinkText 1s infinite;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+ @keyframes blinkText {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;;
+  }
+}
+
+@media screen and (max-width: 75ch) {
+  body {
+    background-color: white;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  serc
+}
+
+@media (max-width: 900px) {
+  article > section {
+    margin: 40px 40px;
+  }
+
+  .features {
+    grid-template-columns: repeat(2 1fr);
+  }
+
+  .profile ul {
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  #files a,
+  .link-allstyles,
+  .profile a[href$=".css"],
+  .link-guidelines {
+    width: 100%;
+    text-align: center;
+  }
+
+  .page-footer ul {
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .page-footer .container {
+  padding: 10px;
+  }
+
+  .container .features {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .features li {
+    padding: auto;
+  }
+
+  .features li a {
+    font-size: 2.5rem;
+  }
 }
