@@ -849,9 +849,13 @@ ul .profile-website span {
 }
 
 #files a {
-  font-size: 0.8rem;
-  padding: 8px 18px;
-  width: 130px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-size: 0.9rem;
+  padding: 10px 35px;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .profile a[href$=".css"],
@@ -877,4 +881,8 @@ ul .profile-website span {
 
 .page-footer .container p {
   font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
 }
