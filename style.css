@@ -98,6 +98,7 @@ h1 {
   animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
   background-image: url('images/magazinetext.jpg');
   background-position: bottom;
+  letter-spacing: 2px;
 }
 
 @keyframes typing {
@@ -185,7 +186,7 @@ header p a:hover {
   color: white;
   text-decoration: underline;
   background-color: #363636;
-  border: 2px solid #E90606;
+  outline: 2px solid #E90606;
 }
 
 nav ul {
@@ -216,7 +217,7 @@ nav ul a:hover {
 
 article .container {
 width: 100%;
-max-width: 90ch;
+max-width: 100ch;
 margin-left: auto;
 margin-right: auto;
 }
@@ -365,10 +366,9 @@ section ul li {
 #files a:hover {
   background-color: white;
   color: #E90606;
-  border: 2px solid #E90606;
+  outline: 2px solid #E90606;
   text-decoration: underline;
 }
-
 
 .link-guidelines {
   display: grid;
@@ -387,7 +387,7 @@ section ul li {
 .link-guidelines:hover {
   background-color: white;
   color: #E90606;
-  border: 2px solid #E90606;
+  outline: 2px solid #E90606;
 }
 
 #profile-title {
@@ -459,7 +459,7 @@ ul .profile-website span {
 .profile a[href$=".css"]:hover {
   background-color: white;
   color: #E90606;
-  border: 2px solid #E90606;
+  outline: 2px solid #E90606;
 }
 
 #styles h2 {
@@ -510,7 +510,9 @@ ul .profile-website span {
 .features li:hover {
   background-color: #E90606;
   color: white;
-  border: 2px solid #E90606;
+  outline: 2px solid #E90606;
+  transform: translateY(-10px);
+  transition: transform 0.3 ease;
 }
 
 .features li a:hover {
@@ -539,7 +541,7 @@ ul .profile-website span {
 .link-allstyles:hover {
   background-color: white;
   color: #E90606;
-  border: 2px solid #E90606;
+  outline: 2px solid #E90606;
 }
 
 .page-footer {
@@ -554,7 +556,7 @@ ul .profile-website span {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 90ch;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -588,7 +590,7 @@ ul .profile-website span {
   padding: 0;
   margin: 20px 0;
   width: 100%;
-  max-width: 70%;
+  max-width: 1200px;
 }
 
 .page-footer li {
@@ -620,7 +622,7 @@ ul .profile-website span {
 .link-twittercontact:hover {
   background-color: #363636;
   color: white;
-  border: 2px solid #E90606;
+  outline: 2px solid #E90606;
 }
 
 .link-rss {
@@ -644,7 +646,7 @@ ul .profile-website span {
 .link-rss:hover {
   background-color: #363636;
   color: white;
-  border: 2px solid #E90606;
+  outline: 2px solid #E90606;
 }
 
 .link-support {
@@ -668,7 +670,7 @@ ul .profile-website span {
 .link-support:hover {
   background-color: #363636;
   color: white;
-  border: 2px solid #E90606;
+  outline: 2px solid #E90606;
 }
 
 .page-footer .container p {
@@ -717,7 +719,7 @@ ul .profile-website span {
   serc
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   article > section {
     margin: 40px 40px;
   }
