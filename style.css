@@ -131,7 +131,7 @@ h1 {
 }
 
 h2 {
-  margin: 0;
+  margin: 10px;
 }
 
 header > .container {
@@ -318,6 +318,7 @@ section ul li {
   font-style: normal;
   font-size: 3rem;
   text-align: center;
+  padding: 20px;
 }
 
 .container ol li {
@@ -354,9 +355,10 @@ section ul li {
 #files .container h3 {
   font-family: "Cinzel-Bold", "serif";
   color: white; 
-  margin-top: 0;
+  margin-top: 10px auto;
   width: 100%;
   text-align: center;
+  padding: 35px auto;
 }
 
 #files a {
@@ -407,7 +409,9 @@ section ul li {
   font-size: 3rem;
   text-align: center;
   color: #E90606;
-  margin-bottom: 0;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgb(239 227 220 / var(--tw-bg-opacity, 1));
 }
 
 .profile ul {
@@ -484,8 +488,11 @@ ul .profile-website span {
   font-weight: 600;
   font-size: 3rem;
   text-align: center;
-  color: #E90606;
-  margin-bottom: 20px;
+  color: #363636;
+  margin: 30px auto;
+  padding: 20px;
+  border-top: 2px solid #E90606;
+  border-bottom: 2px solid #E90606;
 }
 
 .container .features {
@@ -711,6 +718,10 @@ ul .profile-website span {
   margin-bottom: 0;
 }
 
+#contribute h3 {
+  padding: 30px 0;
+}
+
  @keyframes blinkText {
   0%, 100% {
     opacity: 1;
@@ -829,10 +840,12 @@ ul .profile-website span {
 
   article .container h2 {
     font-size: 1.5rem;
+    margin: 15px, auto;
+    padding: 20px 0;
   }
 
   #profile-title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 20px auto;
   }
   
@@ -841,7 +854,7 @@ ul .profile-website span {
   }
 
   #styles h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   #files .container h3 {
@@ -861,10 +874,10 @@ ul .profile-website span {
 .profile a[href$=".css"],
 .link-allstyles,
 .link-guidelines {
-  padding: 10px 20px;
-  margin: 20px auto;
+  padding: 12px 10px;
+  margin: 25px auto;
   width: fit-content;
-  font-size: 1.2rem;
+  font-size: 0.875rem;
 }
 
 #guidelines h3 {
@@ -885,4 +898,7 @@ ul .profile-website span {
 
 h2 {
   font-size: 1.4rem;
+}
+.container h3 {
+  padding: 20px auto;
 }
